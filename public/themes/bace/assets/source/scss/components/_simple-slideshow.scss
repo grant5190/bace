@@ -1,0 +1,46 @@
+// Components Slideshow
+// ------------------------------------------------------------
+
+
+.simple-slideshow {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  br {
+    display: none;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  .slide {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top:0;
+    width: 100%;
+
+    &:nth-child(n+1) {
+      display: none;
+    }
+    &:first-child {
+      display: block;
+    }
+
+    .image {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+}

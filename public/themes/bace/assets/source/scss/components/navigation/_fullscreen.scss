@@ -1,0 +1,60 @@
+// Components Fullscreen
+// ------------------------------------------------------------
+
+.toggle-button {
+  outline: none;
+}
+
+nav[role="navigation"] {
+  background: rgba($black, .9);
+  color: $white;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+
+  ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+  }
+
+  a {
+	color: $white;
+	display: block;
+	font-family: $base-font-family-alt;
+	font-weight: $base-font-weight;
+	padding: ($gutter / 4) 0;
+	text-decoration: none;
+	@include adjust-font-size-to(30px);
+  }
+
+  .footer {
+	bottom: ($gutter * 6);
+	position: absolute;
+	width: 100%;
+	text-align: center;
+
+	.linkedin {
+	  @include adjust-font-size-to(20px);
+	}
+  }
+
+  @include respond-to($bp-med) {
+	a {
+	  @include adjust-font-size-to(44px);
+	}
+
+	.footer {
+	  bottom: ($gutter * 8);
+	  .linkedin {
+		@include adjust-font-size-to(30px);
+	  }
+	}
+  }
+
+}

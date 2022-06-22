@@ -1,0 +1,25 @@
+/*
+ * 6. Components
+ * Holder file to bring all the component files into one place
+*/
+
+@import "sprite.sheet";
+
+// Navigation
+
+@import "navigation/nav";
+
+// Plugins
+
+@import "plugins/plugins";
+
+
+// Components top level
+
+@import "identity";
+@import "skip_content";
+@import "main";
+@import "footer";
+@import "panel";
+@import "centering";
+

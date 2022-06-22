@@ -1,0 +1,14 @@
+// Components Sprite Sheet
+// ------------------------------------------------------------
+
+.sprite-sheet {
+  background-color: transparent;
+  background-image: url($sprite-master);
+  background-repeat: no-repeat;
+  background-size: $sprite-width $sprite-height;
+
+  .no-svg & {
+    background-image: url($sprite-master-png);
+  }
+}
+

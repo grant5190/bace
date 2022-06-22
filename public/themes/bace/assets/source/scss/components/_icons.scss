@@ -1,0 +1,29 @@
+// Components icons
+// ------------------------------------------------------------
+
+.icons {
+  position: absolute;
+  right: ($gutter * 6);
+
+  ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+  }
+
+  li {
+	display: inline-block;
+	margin: 0 0 0 $gutter;
+  }
+
+  a {
+	color: $white;
+	text-decoration: none;
+  }
+
+  @include respond-to($bp-med) {
+	right: ($gutter * 2);
+  }
+
+
+}

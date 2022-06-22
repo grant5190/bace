@@ -1,0 +1,17 @@
+// Components Home Intro
+// ------------------------------------------------------------
+
+.home-intro {
+  text-align: center;
+
+  .identity {
+	margin: ($gutter * 3) auto ($gutter * 6) auto;
+  }
+
+  @include respond-to($bp-med) {
+	.identity {
+	  margin: ($gutter * 6) auto ($gutter * 10) auto;
+	}
+  }
+
+}

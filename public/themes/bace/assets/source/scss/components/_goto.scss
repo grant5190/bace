@@ -1,0 +1,31 @@
+// Components Goto
+// ------------------------------------------------------------
+
+
+.goto {
+  background-position: $goto-pos;
+  bottom: 0;
+  display: block;
+  left: 50%;
+  height: $goto-height;
+  overflow: hidden;
+  margin: ($gutter * 2) (-($goto-width / 2)) ($gutter * 2);
+  position: absolute;
+  text-indent: -119988px;
+  width: $goto-width;
+
+  @extend .sprite-sheet;
+
+  &.alt {
+    background-position: $goto-pos-alt;
+  }
+
+  &.reverse {
+    background-position: $goto-pos-reverse;
+  }
+
+  &.alt-reverse {
+    background-position: $goto-pos-alt-reverse;
+  }
+
+}

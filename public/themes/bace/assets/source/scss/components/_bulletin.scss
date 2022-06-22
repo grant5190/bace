@@ -1,0 +1,114 @@
+// Components Bulletin
+// ------------------------------------------------------------
+
+.news-block {
+  color: $white;
+  text-decoration: none;
+
+  img {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+
+  &:hover {
+    color: $white;
+  }
+  &:visited {
+    color: $white;
+  }
+
+  .inner {
+    border-bottom: 1px solid $white;
+    padding: 0 0 ($gutter * 2) 0;
+    margin: 0 0 ($gutter * 4) 0;
+  }
+
+  .preview {
+    margin: 0 0 $gutter 0;
+  }
+
+  .ntitle {
+    margin: 0;
+  }
+
+
+  @include respond-to($bp-med) {
+
+    .preview {
+      margin: 0 0 ($gutter * 2) 0;
+    }
+
+    .fixed-height {
+      height: 70px;
+    }
+  }
+
+
+}
+
+
+.bulletin {
+  background-color: $black;
+  color: $white;
+
+
+  header, footer {
+    height: 50vh;
+    text-align: center;
+  }
+
+  article {
+    border-top:1px solid $white;
+    padding: ($gutter * 2) 0 0 0;
+
+    &:last-child {
+      border-bottom:1px solid $white;
+    }
+
+    .image {
+      margin-top: ($gutter * 3);
+    }
+
+  }
+
+  .title {
+    text-decoration: none;
+    margin: 0 0 ($gutter * 4) 0;
+  }
+
+  .date {
+    clear:both;
+    margin: 0;
+  }
+
+  .more {
+    margin: $gutter 0 0 0;
+    padding-left: ($gutter * 2);
+    position: relative;
+
+    &:before {
+      background-position: $bullet-list-pos;
+      content: '';
+      height: ($gutter * 2);
+      left: -6px;
+      position: absolute;
+      top: -3px;
+      width: ($gutter * 2);
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      @extend .sprite-sheet;
+    }
+
+  }
+
+  @include respond-to($bp-med) {
+    article {
+      .image {
+        margin-top: 0;
+      }
+
+    }
+  }
+
+}

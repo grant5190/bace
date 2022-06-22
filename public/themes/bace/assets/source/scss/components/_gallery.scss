@@ -1,0 +1,16 @@
+// Components Gallery
+// ------------------------------------------------------------
+
+.gallery {
+  &.grid {
+
+    img {
+      width: 100%;
+      margin-bottom: ($gutter * 2);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

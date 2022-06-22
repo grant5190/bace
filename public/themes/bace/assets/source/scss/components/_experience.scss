@@ -1,0 +1,108 @@
+// Components Experience
+// ------------------------------------------------------------
+
+
+
+.experience {
+  background: $base-background;
+  position: relative;
+
+  header, footer {
+    padding: ($gutter * 2) 0;
+    text-align: left;
+  }
+
+  footer {
+    height: 10vh;
+  }
+
+  .experiences {
+    margin: 0 (-($gutter));
+  }
+
+  .item {
+    color: $white;
+    margin: $gutter 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .inner, .overlay {
+      background: transparent;
+      bottom: -1px;
+      left: ($gutter - 1);
+      opacity: 1;
+      position: absolute;
+      right: ($gutter - 1);
+      top: -1px;
+      @include transition-property(all);
+      @include transition-duration(.5s);
+      @include transition-timing-function(ease-in-out);
+    }
+
+    .overlay {
+      background: $black;
+      opacity: 0;
+      padding: ($gutter * 2);
+      z-index: 10000;
+    }
+
+
+    /* Commented out so we can pull back in again when needed
+    &:hover, &:focus {
+      .inner {
+        opacity: 1;
+        .title {
+          display: none;
+        }
+      }
+
+      .overlay {
+        opacity: .9;
+      }
+
+    }
+    */
+  }
+
+  &.large {
+
+    .experiences {
+      margin: 0 (-($gutter * 2));
+    }
+
+    .item {
+      margin: ($gutter * 2) 0;
+      padding: 0 ($gutter * 2);
+    }
+  }
+
+  @include respond-to($bp-med) {
+
+    header {
+      height: 50vh;
+      text-align: center;
+    }
+
+    .item {
+      .overlay {
+        padding: ($gutter * 4);
+      }
+    }
+  }
+
+
+  @include respond-to($bp-xl) {
+    .item {
+      .overlay {
+        padding: ($gutter * 6);
+      }
+    }
+  }
+
+}

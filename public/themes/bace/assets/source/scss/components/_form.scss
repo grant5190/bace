@@ -1,0 +1,57 @@
+// Components Form
+// ------------------------------------------------------------
+
+.form {
+
+  .form-group {
+	margin: 0 0 ($gutter * 2) 0;
+  }
+
+  .input {
+	background-color: $black;
+	border: none;
+	outline: none;
+	padding: ($gutter) 0;
+	width: 100%;
+  }
+
+  .select {
+	padding: ($gutter) 0;
+
+	select {
+	  background: url("data:image/svg+xml;base64,CjxzdmcgaWQ9IkxheWVyXzEiIGRhdGEtbmFtZT0iTGF5ZXIgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNC45NSAxMCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNmZmY7fS5jbHMtMntmaWxsOiM4Nzc2NkE7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5hcnJvd3M8L3RpdGxlPjxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjQuOTUiIGhlaWdodD0iMTAiLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMS40MSA0LjY3IDIuNDggMy4xOCAzLjU0IDQuNjcgMS40MSA0LjY3Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjMuNTQgNS4zMyAyLjQ4IDYuODIgMS40MSA1LjMzIDMuNTQgNS4zMyIvPjwvc3ZnPg==") no-repeat 100% 50%;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  appearance: none; /* Remove default arrow */
+	}
+  }
+
+  label {
+	font-weight: normal;
+	width: 100%;
+  }
+
+  .form-group {
+	border-bottom: 1px solid $white;
+
+	&.action {
+	  border: none;
+	  text-align: center;
+	}
+  }
+
+  .send {
+	margin: ($gutter * 2) 0 0;
+  }
+
+  @include respond-to($bp-med) {
+	label, .label {
+	  display: inline-block;
+	  width: 30%;
+	}
+	.input {
+	  width: 65%;
+	}
+  }
+
+}

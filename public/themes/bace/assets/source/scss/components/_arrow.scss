@@ -1,0 +1,22 @@
+// Components Arrow
+// ------------------------------------------------------------
+
+
+.down-arrow-header {
+  background-position: -500px -24px;
+  display: block;
+  height: 22px;
+  width: 19px;
+
+  position: absolute;
+  bottom: ($gutter * 4);
+  left: 50%;
+  margin: 0 0 0 -10px;
+  @extend .sprite-sheet;
+
+
+  @include animation(bounce 3s infinite);
+
+}
+
+

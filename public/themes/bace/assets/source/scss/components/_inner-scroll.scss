@@ -1,0 +1,133 @@
+// Components Inner Scroll
+// Experimental Layouts
+// ------------------------------------------------------------
+
+.inner-scroll {
+  background-color: $black;
+  color: $white;
+
+  .section {
+    height: 380px;
+
+    &.free {
+      height: auto;
+    }
+  }
+
+  .title {
+    color: $white;
+
+    &.service-title {
+      margin-bottom: ($gutter * 4);
+    }
+  }
+
+  .parallax {
+    background-color: $black;
+    position: relative;
+    text-align: center;
+    z-index: 10000;
+
+    .subtitle {
+      position: static;
+    }
+
+    .alternate {
+      // background-color: rgba($black, .8);
+    }
+
+  }
+
+
+  .intro {
+    h4:first-of-type {
+      margin: 0 0 ($gutter * 2) 0;
+    }
+    padding: ($gutter * 6) 0 ;
+  }
+
+  .subtitle-holder {
+    margin-bottom: ($gutter * 4);
+  }
+
+
+  .fixed-filters {
+    padding: ($gutter * 2) $gutter;
+
+    .title {
+      a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover, &:visited {
+          color: $white;
+        }
+      }
+    }
+
+    .services {
+      padding: ($gutter * 2) 0 0 0;
+    }
+
+  }
+
+
+  @include respond-to($bp-med) {
+    .section, .alternate {
+      background-attachment:fixed;
+    }
+
+    .section {
+      height:480px;
+      &.free {
+        height: auto;
+      }
+    }
+
+    .parallax {
+      background-color: rgba($black, .8);
+    }
+  }
+
+
+
+  @include respond-to($bp-large) {
+
+    .section {
+      height: 100vh;
+
+      &.fullscreen {
+        height: 100vh;
+      }
+      &.free {
+        height: auto;
+      }
+    }
+
+
+    .fixed-filters {
+      padding: 0;
+      position: fixed;
+      top: 200px;
+      width: 300px;
+    }
+
+    .parallax {
+
+      .intro {
+        padding: ($gutter * 9) 0 ;
+      }
+
+    }
+
+
+    .grid-content {
+      padding: 0 0 0 column-calc(4);
+    }
+
+
+  }
+
+
+
+}

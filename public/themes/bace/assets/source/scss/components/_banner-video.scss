@@ -1,0 +1,53 @@
+// Components Banner Video
+// ------------------------------------------------------------
+
+.banner-video {
+  background-color: $base-color;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  .overlay {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: $z-overlay;
+  }
+
+  .sound {
+    bottom: ($gutter * 4);
+    color: $white;
+    display: inline-block;
+    left: ($gutter * 2);
+    text-decoration: none;
+    position: absolute;
+    vertical-align: middle;
+    z-index:$z-sound;
+    @include adjust-font-size-to(14px);
+
+    .icon {
+      margin: 0 ($gutter / 2) 0 0;
+      vertical-align: middle;
+
+      @include adjust-font-size-to(18px);
+    }
+  }
+
+  @include respond-to(767px) {
+    height: 60vh;
+    min-height: 350px;
+  }
+
+
+  @include respond-to($bp-large) {
+	height: 100vh;
+  }
+
+}

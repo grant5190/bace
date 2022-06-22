@@ -1,0 +1,68 @@
+// Components Triangle
+// ------------------------------------------------------------
+
+
+.triangle {
+  margin: 0 auto;
+  padding: 0 0 $gutter 0;
+  width: 90%;
+
+  .point {
+	cursor: pointer;
+	fill: $black;
+	@include transition-property(fill);
+	@include transition-duration(.4s);
+	@include transition-timing-function(ease-in-out);
+
+	.overview {
+	  opacity: 0;
+	  @include transition-property(opacity);
+	  @include transition-duration(.4s);
+	  @include transition-timing-function(ease-in-out);
+	}
+
+	.code {
+	  opacity: 1;
+	  @include transition-property(opacity);
+	  @include transition-duration(.4s);
+	  @include transition-timing-function(ease-in-out);
+	}
+
+	&.on {
+	  fill: #151515;
+	}
+
+	&:hover {
+	  .overview {
+		opacity: 1;
+	  }
+	  .code {
+		opacity: 0;
+	  }
+	}
+
+  }
+
+
+
+
+  @include respond-to($bp-med) {
+	width: 500px;
+  }
+
+  @include respond-to($bp-large) {
+	width: 650px;
+  }
+
+}
+
+.type-click {
+  a {
+	color: $white;
+	text-decoration: none;
+
+	&:hover, &:visited {
+	  color: $white;
+	}
+  }
+}

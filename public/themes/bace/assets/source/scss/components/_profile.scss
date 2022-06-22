@@ -1,0 +1,74 @@
+// Components Profile
+// ------------------------------------------------------------
+
+.profile-holder {
+  @include clearfix();
+  @include respond-to($bp-large) {
+    margin: 0 0 ($gutter * 4) 0;
+  }
+}
+
+.people-divider {
+  @include respond-to($bp-med) {
+    margin: 0 0 ($gutter * 2) 0;
+  }
+}
+
+
+.profile {
+  clear: both;
+  @include clearfix();
+
+  &.team {
+    margin-bottom: ($gutter * 3);
+
+    .profile-copy {
+      padding: 0 0 ($gutter * 2) 0;
+      border-bottom:1px solid $white;
+    }
+  }
+
+
+  .headshot, .name {
+    // padding: 0 $gutter;
+    // float: left;
+    width: column-calc(9);
+
+    &.rev {
+    //  float: right;
+    }
+  }
+
+  .headshot {
+    margin: 0 0 ($gutter * 2) 0;
+
+    .inner {
+      background-repeat: no-repeat;
+      min-height: 400px;
+    }
+
+  }
+
+  .name {
+    &.rev {
+      width: column-calc(4);
+    }
+  }
+
+  .headshot {
+    &.rev {
+      width: column-calc(8);
+    }
+  }
+
+  .position {
+    margin: 0 0 $gutter 0;
+  }
+
+  @include respond-to($bp-med) {
+    .profile-copy {
+      padding: 0 ($gutter * 2) 0 0;
+    }
+  }
+
+}

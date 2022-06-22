@@ -1,0 +1,46 @@
+// Components Careers
+// ------------------------------------------------------------
+
+.careers {
+  background-color: $black;
+  color: $white;
+
+  header, footer {
+	padding: ($gutter * 2) 0;
+	text-align: center;
+  }
+
+
+  @include respond-to($bp-med) {
+	header, footer {
+	  padding: ($gutter * 4) 0 ($gutter * 8) 0;
+	}
+  }
+
+}
+
+.career-block {
+  .border {
+	padding: ($gutter) 0 0 0;
+	display: block;
+	border-bottom:1px solid $white;
+  }
+
+  a {
+	color: $white;
+	text-decoration: underline;
+
+	&:hover, &:visited {
+	  color: $white;
+	}
+
+  }
+
+  @include respond-to($bp-med) {
+	.border {
+	  padding: ($gutter * 2) 0 0 0;
+	}
+  }
+
+
+}

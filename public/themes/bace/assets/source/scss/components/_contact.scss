@@ -1,0 +1,62 @@
+// Components Contact
+// ------------------------------------------------------------
+
+.contact-block {
+  padding: ($gutter * 6) 0;
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:visited {
+      color: $white;
+    }
+  }
+
+  .copy {
+    h4 {
+      margin: 0 0 ($gutter * 2) 0;
+    }
+  }
+
+  .spaced {
+    h4, h5 {
+      margin: 0 0 ($gutter * 2) 0;
+    }
+  }
+
+
+}
+
+
+.contact {
+  padding: 0;
+
+  .contact-details {
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  .social {
+    margin: ($gutter * 2) 0 0 0;
+    @include adjust-font-size-to(24px);
+  }
+
+
+
+  @include respond-to($bp-med) {
+
+
+    .contact-copy {
+      padding: 0;
+    }
+
+    .contact-details {
+      padding: ($gutter * 4) 0 0 0;
+    }
+
+  }
+}

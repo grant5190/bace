@@ -1,0 +1,114 @@
+// Components identity
+// ------------------------------------------------------------
+
+%logo {
+  background-position: $ident-small-pos;
+  display: block;
+  height: $ident-height-small;
+  overflow: hidden;
+  text-indent: -119988px;
+  width: $ident-width-small;
+
+  @extend .sprite-sheet;
+}
+
+
+.identity {
+  height: $ident-height-small;
+  margin: 0 auto;
+  width: $ident-width-small;
+
+  a {
+    @extend %logo;
+  }
+
+  &.left {
+    margin: 0;
+  }
+
+  &.center {
+    margin: 0 auto;
+  }
+
+  &.alt {
+    a {
+      background-position: $ident-small-pos-alt;
+    }
+  }
+
+
+  &.massive {
+    height: $ident-height-large;
+    width: $ident-width-large;
+    a {
+      height: $ident-height-large;
+      width: $ident-width-large;
+      background-position: $ident-large-pos;
+    }
+  }
+
+  &.massive {
+    &.alt {
+      a {
+        background-position: $ident-large-pos-alt;
+      }
+    }
+  }
+
+
+  @include respond-to($bp-med) {
+    height: $ident-height-large;
+    margin: 0 auto;
+    width: $ident-width-large;
+
+    a {
+      background-position: $ident-large-pos;
+      height: $ident-height-large;
+      width: $ident-width-large;
+    }
+
+    &.alt {
+      a {
+        background-position: $ident-large-pos-alt;
+      }
+    }
+
+    &.small {
+      height: $ident-height-small;
+      width: $ident-width-small;
+
+      a {
+        height: $ident-height-small;
+        width: $ident-width-small;
+        background-position: $ident-small-pos;
+      }
+
+      &.alt {
+        a {
+          background-position: $ident-small-pos-alt;
+        }
+      }
+
+    }
+
+    &.massive {
+      height: $ident-height-massive;
+      width: $ident-width-massive;
+      a {
+        height: $ident-height-massive;
+        width: $ident-width-massive;
+        background-position: $ident-massive-pos;
+      }
+    }
+
+    &.massive {
+      &.alt {
+        a {
+          background-position: $ident-massive-pos-alt;
+        }
+      }
+    }
+
+  }
+
+}

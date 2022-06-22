@@ -1,0 +1,57 @@
+// Components Video
+// ------------------------------------------------------------
+
+.video {
+  margin: ($gutter * 4) auto;
+  width: 300px;
+
+
+
+
+  video {
+    display: block;
+
+    //max-height: 150vw;
+    //max-width: none;
+    //min-height: 30em;
+    object-fit: contain;
+    width: 100%;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  @include respond-to($bp-med) {
+    margin: ($gutter * 8) auto;
+  }
+
+  @include respond-to($bp-large) {
+    margin: ($gutter * 10) auto;
+  }
+
+
+}
+
+.video-holder {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: $z-video-holder;
+
+  video {
+    background-position: center;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+}

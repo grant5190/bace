@@ -1,0 +1,17 @@
+// Components Site
+// ------------------------------------------------------------
+
+
+html, body {
+
+   // height: 100%;
+
+}
+
+.bordered {
+  background: $white;
+  clear: both;
+  height: 1px;
+  width: 100%;
+  margin: ($gutter * 2) 0;
+}

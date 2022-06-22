@@ -1,0 +1,83 @@
+// Components Page
+// ------------------------------------------------------------
+
+.page {
+  display: block;
+  position: relative;
+  text-align: center;
+
+  .intro {
+    margin:($gutter * 2) 0;
+  }
+
+  .quote {
+    background: rgba(cyan, .4);
+    padding: ($gutter * 3) 0;
+
+    .name {
+      text-align: center;
+      margin: ($gutter * 2) 0 0 0;
+
+      span {
+        border-bottom: 1px solid $base-color;
+        padding: 0 $gutter  ($gutter * 2) $gutter;
+      }
+    }
+
+  }
+
+  &.dark {
+    background-color: $black;
+    color: $white;
+    .quote {
+      background: $black;
+      span {
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+
+
+  @include respond-to($bp-large) {
+    .intro {
+      margin: ($gutter * 4) 0 ($gutter * 8);
+    }
+
+    .quote {
+      padding: ($gutter * 10) 0;
+
+      .name {
+        margin: ($gutter * 3) 0 0 0;
+      }
+    }
+  }
+
+}
+
+.inner-page {
+  text-align: left;
+  @include clearfix();
+
+  .title {
+    text-decoration: none;
+    margin: 0 0 ($gutter * 2) 0;
+  }
+
+  @include respond-to($bp-large) {
+    .textual {
+      // padding-left: ($gutter * 4);
+      padding-right: ($gutter * 4);
+    }
+  }
+}
+
+
+.page-segment {
+  margin-bottom: ($gutter * 3);
+  @include clearfix();
+
+  @include respond-to($bp-med) {
+    margin-bottom: ($gutter * 5);
+  }
+
+}

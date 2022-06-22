@@ -1,0 +1,31 @@
+// Components Service
+// ------------------------------------------------------------
+
+
+.service-copy {
+
+  ul {
+	list-style-type: none;
+	margin: 0;
+
+	 li {
+	   padding: 0 0 0 ($gutter * 1.5);
+	   position: relative;
+
+
+	   &::before {
+		 // font-family: "Font Awesome 5 Pro";
+		 // content: "\f111";
+		 content: "";
+		 left: 0;
+		 position: absolute;
+		 top: ($gutter / 2);
+		 // @include adjust-font-size-to(6px);
+		 border-color: transparent $white;
+		 border-style: solid;
+		 border-width: ($gutter / 2) 0 ($gutter / 2) ($gutter / 2);
+	   }
+
+	 }
+  }
+}

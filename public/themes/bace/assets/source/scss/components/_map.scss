@@ -1,0 +1,45 @@
+// Components Map
+// ------------------------------------------------------------
+
+.map-holder {
+  //padding: 0 $gutter;
+  text-align: left;
+
+  @include respond-to($bp-med) {
+	margin: ($gutter * 4) 0 0 0;
+  }
+}
+
+.map {
+  height: 80vh;
+  overflow: hidden;
+}
+
+.marker {
+  // background-color: $black;
+  background: url(../img/marker.svg) no-repeat center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+
+}
+
+.mapboxgl-popup-content {
+  min-width: 240px;
+
+  .identity {
+	margin: 0 0 $gutter 0;
+  }
+
+  img {
+	width: 180px;
+  }
+
+  @include respond-to($bp-med) {
+	.identity {
+	  margin: 0 0 ($gutter * 2) 0;
+	}
+  }
+}

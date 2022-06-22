@@ -1,0 +1,22 @@
+// Components Titles
+// ------------------------------------------------------------
+
+
+.title {
+  // text-decoration: underline;
+}
+
+.subtitle {
+  left: 0;
+  padding: ($gutter * 2) 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+
+  .free & {
+      position: static;
+  }
+
+}

@@ -1,0 +1,157 @@
+// Components Sections
+// ------------------------------------------------------------
+
+.section {
+  background-color: $white;
+  color: $black;
+  display: block;
+  height: 380px;
+  // height: 90vh;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  @include clearfix();
+  background-size: cover;
+
+  &.dark {
+    background-color: $black;
+    color: $white;
+  }
+
+  &:visited {
+    color: $black;
+
+    &.dark {
+      color: $white;
+    }
+  }
+
+  &.hero {
+    text-align: left;
+  }
+
+  &.banner, .alternate {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .overlay, .alternate {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .alternate {
+    @include transition-property(all);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease-in-out);
+  }
+
+
+  &.fullscreen {
+    height: 100vh;
+  }
+
+  &.flex {
+    height: 80vh;
+  }
+
+  &.free {
+    height: auto;
+  }
+
+  &.action {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+
+  @include respond-to($bp-med) {
+    height: 90vh;
+    &.hero {
+      text-align: center;
+    }
+  }
+
+  @include respond-to($bp-large) {
+
+    &.action {
+
+      .alternate {
+        background-color: rgba($black, .8);
+        opacity: 0;
+      }
+
+      &:hover, &:focus {
+        .alternate {
+          opacity: 1;
+        }
+      }
+
+    }
+
+
+  }
+
+
+
+  /*
+  &.action {
+
+
+    .backgroundblendmode & {
+      background-blend-mode: multiply;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include transition-property(all);
+      @include transition-duration(.5s);
+      @include transition-timing-function(ease-in-out);
+
+      &.banner {
+        background-color: rgba(cyan, 0);
+      }
+    }
+
+    .no-backgroundblendmode & {
+      @include transition-property(all);
+      @include transition-duration(.5s);
+      @include transition-timing-function(ease-in-out);
+
+      .overlay {
+        @include transition-property(all);
+        @include transition-duration(.5s);
+        @include transition-timing-function(ease-in-out);
+      }
+    }
+
+    &:hover {
+      // color: $white;
+
+      .alternate {
+        opacity: 1;
+      }
+
+      .backgroundblendmode & {
+       // background-color: rgba(cyan, 1);
+
+        &.banner {
+       //   background-color: rgba(cyan, .5);
+        }
+      }
+
+      .no-backgroundblendmode & {
+      //  background-color: $white;
+        .overlay {
+      //    background: rgba(cyan, .5);
+        }
+      }
+    }
+  }
+  */
+
+}

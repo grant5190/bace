@@ -1,0 +1,56 @@
+// Elements headings
+// ------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $base-font-family-alt;
+  font-weight: $base-font-weight;
+}
+
+h1, h2 {
+  @include adjust-font-size-to(36px);
+  margin: 0;
+
+  @include respond-to($bp-med, $IE9: false) {
+    @include adjust-font-size-to(52px);
+  }
+}
+
+
+h3 {
+  @include adjust-font-size-to(28px);
+  margin: 0;
+
+  @include respond-to($bp-med, $IE9: false) {
+    @include adjust-font-size-to(42px);
+  }
+}
+
+
+h4 {
+  @include adjust-font-size-to(22px);
+  margin: 0;
+
+  @include respond-to($bp-xl, $IE9: false) {
+    @include adjust-font-size-to(24px);
+  }
+}
+
+
+h5 {
+  @include adjust-font-size-to(18px);
+  margin: 0;
+
+  @include respond-to($bp-med, $IE9: false) {
+    @include adjust-font-size-to(20px);
+  }
+}
+
+
+h6 {
+  @include adjust-font-size-to(10px);
+  margin: 0;
+
+  @include respond-to($bp-med, $IE9: false) {
+    @include adjust-font-size-to(16px);
+  }
+}

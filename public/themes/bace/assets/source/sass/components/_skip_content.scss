@@ -1,0 +1,17 @@
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  text-decoration: none;
+  padding: ($gutter / 4);
+
+  &:focus {
+    color: $grey-dark;
+    position: static;
+    width: auto;
+    height: auto;
+  }
+}

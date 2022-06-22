@@ -1,0 +1,125 @@
+// Components Banner
+// ------------------------------------------------------------
+
+header[role="banner"] {
+  color: $white;
+  left: 0;
+  padding: ($gutter * 2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $z-header;
+
+  @include clearfix();
+
+  .identity {
+    float: left;
+  }
+
+  .hamburger {
+    position: absolute;
+    right: ($gutter * 2);
+    top: 14px;
+  }
+
+
+
+  nav {
+    display: inline-block;
+    @include clearfix();
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 $gutter 0 0;
+    }
+
+  }
+
+  .top-level-nav {
+    display: none;
+  }
+
+  .icons {
+    li {
+      margin: 0 0 0 $gutter;
+    }
+    a {
+      @include adjust-font-size-to(18px);
+    }
+  }
+
+  @include respond-to($bp-med) {
+    text-align: center;
+
+    .identity {
+      float: left;
+      margin: 0;
+      text-align: left;
+      position: absolute;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .top-level-nav {
+      display: inline-block;
+    }
+
+    nav {
+      display: inline-block;
+      margin: 0;
+      text-align: center;
+
+      li {
+        margin: 0 $gutter;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background: $black;
+  color: $white;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  a {
+    display: block;
+    color: $white;
+    text-decoration: none;
+
+    @include adjust-font-size-to(22px);
+  }
+
+  &.open {
+    display: block;
+  }
+
+  @include respond-to($bp-med) {
+    display: none;
+  }
+}

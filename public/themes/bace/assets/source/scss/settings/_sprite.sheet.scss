@@ -1,0 +1,44 @@
+// SET UP YOUR GLOBAL SPRITE SHEETS IN THIS FILE
+
+// Master
+// ------------------------------------------------------------
+
+$sprite-master                  : '../img/master-sprite-sheet.svg';
+$sprite-master-png              : '../img/master-sprite-sheet.png';
+$sprite-height                  : 1000px;
+$sprite-width                   : 600px;
+
+// Sprite sheet componets
+
+$ident-small-pos                : -24px -24px;
+$ident-small-pos-alt            : -24px -200px;
+$ident-width-small              : 100px;
+$ident-height-small             : 20px;
+
+$ident-large-pos                : -24px -100px;
+$ident-large-pos-alt            : -24px -270px;
+$ident-width-large              : 200px;
+$ident-height-large             : 40px;
+
+
+$ident-massive-pos              : -24px -370px;
+$ident-massive-pos-alt          : -24px -510px;
+// $ident-width-massive            : 540px;
+// $ident-height-massive           : 108px;
+
+$ident-width-massive            : 320px;
+$ident-height-massive           : 64px;
+
+
+$goto-pos                       : -24px -899px;
+$goto-pos-alt                   : -80px -899px;
+$goto-width                     : 30px;
+$goto-height                    : 27px;
+
+$goto-pos-reverse               : -124px -900px;
+$goto-pos-alt-reverse           : -180px -900px;
+
+
+//$bullet-list-pos                : -24px -788px;
+$bullet-list-pos                : -19px -794px;
+$bullet-list-pos-active         : -500px -788px;
